@@ -24,11 +24,8 @@ A simple Python tool used to allow your device to communicate and execuate comma
 > By using this software, you agree that you are solely responsible for ensuring that it is used in accordance with all applicable laws and regulations.
 > <br>
 > <br>
-> I am not affiliated with Flipper Devices.
 >#### * Please use with caution, preferably in a virutal environment. *
 <br>
-
-This software was created to explore the possibilties of the Flipper Zero, while also educating users on connecting two computers together using Python. This is one of my first Python scripts so theres may be bugs while I continue to develop. 
 
 ### Additional Information:
 I created this remote management software to demostrate and educate users on the possibilities of the Flipper Zero, while also learning more about network connections and Python sockets.
