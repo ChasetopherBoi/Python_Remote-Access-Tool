@@ -28,7 +28,7 @@ A simple Python tool used to allow your device to communicate and execuate comma
 <br>
 
 ### Additional Information:
-I created this remote management software to demostrate and educate users on the possibilities of the Flipper Zero, while also learning more about network connections and Python sockets.
+I created this remote management software to demostrate and educate users on the possibilities of remote access/remote desktop tools, while also learning more about network connections and Python sockets.
 
 The Server accepts up to 5 clients, and is setup to allow you to easily swap between them whenever necessary.
 
