@@ -126,6 +126,9 @@ Exiting the program is very simple, and can be done by typing 'exit', which will
 ### **Client.py**
 This python script is responsible for interpreting commands sent from the **HOST** and sending back the appropriate response.<br>
 
+The script is setup to continuously run in the background, even after closing the server. The code will attempt to connect after a short today, and continue to loop.<br>
+This ensures the **HOST** can always connect back to the **CLIENT** even after they shutdown the server.
+
 Some commands will respond with simple text and be executed, while others may respond back with the output data from the **CLIENT**.
 
 ## Commands
