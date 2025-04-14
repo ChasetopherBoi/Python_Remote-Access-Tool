@@ -1,4 +1,4 @@
-# PythonRemoteAccessTool
+# Remote PC Access Tool - Python
 A simple Python tool used to allow your device to communicate and execuate commands on another device. With Port Forwarding, it can be configured to work on different WIFI networks. I created this tool to learn more about sockets, sending/receiving commands accross devices, and gain a better understanding of how malware works and signs to detect when your device has become infected. This is one of my first Python projects, there may be many bugs, and some of the code may not be fully explained. Feel free to suggest any changes or features you would like to see added in the future.
 
 # Table of Contents #
