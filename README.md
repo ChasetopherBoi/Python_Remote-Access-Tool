@@ -85,7 +85,7 @@ Prior to packaging utilize PyArmor to obfuscate the **CLIENT** script to help pr
 
 ### PyInstaller
 #### Package the **CLIENT** script as an (.EXE) executable for deployment.
-    PyInstaller --noconsole --onefile --hidden-import=psutil --hidden-import=shutil --hidden-import=webbrowers --hidden-import=pyautogui --hidden-import=getmac Client.py 
+    PyInstaller --noconsole --onefile --hidden-import=psutil --hidden-import=shutil --hidden-import=webbrowers --hidden-import=pyautogui --hidden-import=getmac --hidden-import=base64 Client.py 
 #### Ensure 'Client.py' is replaced with the name of the obfuscated client file.
 <br>
 See **PyInstaller** documentation for additional information.
