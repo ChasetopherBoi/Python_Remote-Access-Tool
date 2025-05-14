@@ -52,10 +52,10 @@ Execute the following commands to install necessary Python libraries to use this
         pip install validators
         pip install pillow
         pip install zlib
+        pip install PyInstaller
 
         *** Optional ***
         pip install PyArmor
-        pip install PyInstaller
 ### 2. Configure IP & Port
 Inside each of the files, locate the following lines of code and replace the **HOST** and **PORT** with your desired IP Address and Port number. 
 
