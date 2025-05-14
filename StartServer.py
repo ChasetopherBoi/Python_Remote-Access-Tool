@@ -6,6 +6,7 @@ import time
 import socket
 import threading
 import validators
+import base64
 
 from PIL import Image
 
@@ -112,7 +113,6 @@ def display_clients():
     print("# |  |\  \ # / / ## \ \ ### | | #########")
     print("# |__| \__\ /_/ #### \_\ ## |_| #########")
     print("#########################################")
-
 
     print("[CONNECTIONS]")
     print("*" * 50)
@@ -492,9 +492,15 @@ def handle_upload_command(command, client_socket):
             print(f"[ERROR] Source file '{source_filepath}' not found.")
             return
 
+        # Read data from the file and encode it
+        with open(source_filepath, "rb") as f:
+            file_data = f.read()
+
+        file_data_encoded = base64.b64encode(file_data).decode()
+
         # Send command to client
-        upload_request = f"upld {source_filepath} {destination_filepath}"
-        client_socket.sendall(command.encode())
+        upload_request = f"upld {file_data_encoded} {destination_filepath}"
+        client_socket.sendall(upload_request.encode())
 
         client_response = recv_response(client_socket).decode(errors="ignore")
 

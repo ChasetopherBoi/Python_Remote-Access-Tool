@@ -10,6 +10,7 @@ import subprocess
 import psutil
 import shutil
 import ctypes
+import base64
 
 import platform
 import webbrowser
@@ -110,17 +111,19 @@ def handle_upload(client, server_command):
     try:
         parts = server_command.split(" ", 2)
 
-        source_filepath = parts[1].strip()
+        file_data_encoded = parts[1].strip()
         destination_filepath = parts[2].strip()
+
+        file_data = base64.b64decode(file_data_encoded.encode())
 
         # Create the target directory if it does not exist
         os.makedirs(os.path.dirname(destination_filepath), exist_ok=True)
 
-        # Perform file transfer from server to file location
-        shutil.copy(source_filepath, destination_filepath)
+        with open(destination_filepath, "wb") as f:
+            f.write(file_data)
 
         client.sendall(
-            f"[UPLD] File '{source_filepath}' uploaded to '{destination_filepath}'".encode()
+            f"[UPLD] File successfully uploaded to '{destination_filepath}'".encode()
         )
     except (
         socket.timeout,
